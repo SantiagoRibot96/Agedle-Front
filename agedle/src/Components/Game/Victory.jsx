@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "react-bootstrap/Modal";
+import Donation from "../Donation"
 
 const Victory = (props) => {
   const [isShown, setIsShown] = useState(true);
@@ -47,6 +48,8 @@ const Victory = (props) => {
                 <button type="button" className="btn btn-dark" onClick={Close}>
                   Play again
                 </button>
+
+                <Donation></Donation>
               </div>
             </div>
           </div>

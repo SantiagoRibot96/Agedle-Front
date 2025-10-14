@@ -126,6 +126,7 @@ small {
   color: #fff;
   background-image: linear-gradient(#408140, #5cb85c);
   border: none;
+  min-height: 32em;
 }
 
 .victory .smaller {
@@ -133,7 +134,7 @@ small {
 }
 
 .victory .itemImg {
-  width: 8em;
+  width: 5em;
   height: auto;
   max-width: 100%;
 }
@@ -249,7 +250,7 @@ small {
 .select-option {
   display: flex;
   align-items: flex-start;
-  color: #fff;
+  color: var(--dark-color);
 }
 
 .select-option img {
@@ -922,6 +923,70 @@ small {
   }
 }
 
-.btnEspecial{
+.btnEspecial {
   background: var(--wrong-color);
+}
+
+.tituloHTP {
+  text-align: center;
+  color: var(--title-color);
+  font-family: Roboto Condensed;
+  font-size: 4rem;
+}
+
+.hola {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.hola1 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.nodeco {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hrline {
+  color: var(--title-color);
+}
+
+#footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 1rem;
+  background: var(--navbar-bg-color);
+}
+
+.donations-card {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--secondary-color);
+  display: inline-block;
+}
+
+.donate-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.donate-button:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+.heart-icon {
+  font-size: 1.2em;
 }
