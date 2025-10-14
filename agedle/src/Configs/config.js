@@ -1,4 +1,4 @@
 const config = {
-  url: import.meta.env.VITE_API_URL || "http://localhost:8080/api",
+  url: import.meta.env.VITE_API_URL || "https://agedle.com/api",
 };
 export default config;
