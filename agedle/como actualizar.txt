@@ -1,0 +1,21 @@
+# 1. Entrás a tu servidor
+ssh -i "D:/Descargas/nombrecualquiera.ppk" bitnami@18.232.128.55
+
+# 2. Vas a la carpeta del proyecto frontend
+cd /opt/bitnami/app/frontend
+
+# 3. Bajás los últimos cambios
+git pull origin main     # (o master, según tu rama)
+
+# 4. Reinstalás dependencias (si cambiaste algo en package.json)
+npm install
+
+# 5. Recompilás la app
+npm run build
+
+# 6. Copiás los archivos estáticos a Apache
+sudo rm -rf /opt/bitnami/apache2/htdocs/*
+sudo cp -r dist/* /opt/bitnami/apache2/htdocs/
+
+# 7. Reiniciás Apache (por si cacheó algo)
+sudo /opt/bitnami/ctlscript.sh restart apache
