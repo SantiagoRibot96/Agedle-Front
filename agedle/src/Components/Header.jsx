@@ -8,19 +8,24 @@ export default function Header() {
                     <img src={"/iconBCK.png"} className="m-2 logo" alt="Logo"/>
                 </Link>
             </div>
-            <div className="col-2 container-fluid">
+            <div className="col container-fluid">
                 <Link className="navbar-brand" to="/game/civ">
                     Civ Guess
                 </Link>
             </div>
-            <div className="col-2 container-fluid">
+            <div className="col container-fluid">
                 <Link className="navbar-brand" to="/game/unit">
                     Unit Guess
                 </Link>
             </div>
-            <div className="col-1 container-fluid">
+            <div className="col container-fluid">
                 <Link className="navbar-brand" to="/about">
                     About
+                </Link>
+            </div>
+            <div className="col container-fluid">
+                <Link className="navbar-brand" to="/howto">
+                    How To Play
                 </Link>
             </div>
         </nav>

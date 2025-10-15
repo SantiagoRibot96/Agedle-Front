@@ -1,6 +1,6 @@
 import Donation from "../Components/Donation"
 
-const Home = () => {
+const HowTo = () => {
   return (
     <div className="d-flex justify-content-center">
       <div className="card p-5 hola1 w-md-75 text-start">  
@@ -60,4 +60,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HowTo

@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CivGame from "./Views/CivGame";
 import UnitGame from "./Views/UnitGame";
-import Home from "./Views/Home";
+import HowTo from "./Views/HowTo";
 import About from "./Views/About";
 
 import './Main.css'
@@ -17,11 +17,12 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/" element={<Navigate to="/game/civ" />} />
+        <Route path="*" element={<Navigate to="/game/civ" />} />
         <Route path="/game/civ" element={<CivGame />} />
         <Route path="/game/unit" element={<UnitGame />} />
         <Route path="/about" element={<About />} />
+        <Route path="/howto" element={<HowTo />} />
       </Routes>
       
       <Footer />
