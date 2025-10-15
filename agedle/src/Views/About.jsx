@@ -1,3 +1,5 @@
+import Donation from "../Components/Donation"
+
 const About = () => {
   return (
     <div className="d-flex justify-content-center">
@@ -32,6 +34,8 @@ const About = () => {
           Agedle was created under Microsoft's "Game Content Usage Rules" using assets from Age of Empires II: DE,
           and it is not endorsed by or affiliated with Microsoft. 
         </p>
+
+        <Donation></Donation>
       </div>
     </div>
   )
