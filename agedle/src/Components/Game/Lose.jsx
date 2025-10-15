@@ -56,14 +56,14 @@ const Lose = (props) => {
               <Modal.Header></Modal.Header>
 
               <div className="pb-5">
-                <h1 className="pb-3">You Loss!</h1>
+                <h1 className="pb-3">You Lost!</h1>
 
                 <img
                   src={source}
                   alt={validGuesses}
                 />
 
-                <h2>Correct guess was: {validGuesses}</h2>
+                <h2>The correct guess was: {validGuesses}</h2>
 
                 <button className="btn btn-outline-dark mb-3 mt-1 min-vw-25" onClick={() => Reroll(reroll)} > Reroll </button>
               </div>
