@@ -15,6 +15,7 @@ const CivGame = () => {
     const [correctGuess, setCorrectGuess] = useState(false);
     const [title, setTitle] = useState("");
     const [showLose, setShowLose] = useState(false);
+    const [discarded, setDiscarded] = useState(new Set());
 
     useEffect(() => {
         FetchCivs();
@@ -95,6 +96,20 @@ const CivGame = () => {
         setCorrectGuess(false);
     };
 
+    const handleRightClick = (event, civLabel) => {
+        event.preventDefault();
+
+        setDiscarded(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(civLabel)) {
+                newSet.delete(civLabel);
+            } else {
+                newSet.add(civLabel);
+            }
+            return newSet;
+        });
+    };
+
     return (
     <div className="container main pt-4 pb-5 mb-5">
 
@@ -113,8 +128,11 @@ const CivGame = () => {
                                 return (
                                     <button
                                         key={civ.value}
-                                        className={`civ-button ${isGuessed ? (isCorrect ? 'correct-guess' : 'disabled') : ''}`}
+                                        className={`civ-button
+                                            ${isGuessed ? (isCorrect ? 'correct-guess' : 'disabled') : ''}
+                                            ${discarded.has(civ.label) ? (isGuessed ? '' : 'discarded') : ''}`}
                                         onClick={() => Guess(civ.label)}
+                                        onContextMenu={(e) => handleRightClick(e, civ.label)}
                                         disabled={correctGuess || isGuessed}
                                         type="button"
                                     >
@@ -125,7 +143,7 @@ const CivGame = () => {
                                         className="civ-image"
                                         />
                                         <span className="civ-name">{civ.label}</span>
-                                        {isCorrect && <div className="correct-indicator">✓</div>}
+                                        {isGuessed ? (isCorrect ? <div className="correct-indicator">✓</div> : <div className="wrong-indicator">✗</div>) : ''}
                                     </button>
                                 );
                             })

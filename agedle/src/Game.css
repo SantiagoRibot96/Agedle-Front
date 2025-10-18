@@ -691,16 +691,16 @@ small {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 8px;
   }
-  
+
   .civ-image {
     width: 48px;
     height: 48px;
   }
-  
+
   .civ-name {
     font-size: 0.7rem;
   }
-  
+
   .civ-grid-container {
     max-height: 300px;
   }
@@ -710,7 +710,7 @@ small {
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   }
-  
+
   .civ-image {
     width: 56px;
     height: 56px;
@@ -780,6 +780,9 @@ small {
 }
 
 .civ-button.disabled {
+  border-color: var(--wrong-color);
+  border-width: 3px;
+  background: var(--secondary-color);
   opacity: 0.4;
   cursor: not-allowed;
   transform: none;
@@ -788,6 +791,7 @@ small {
 .civ-button.correct-guess {
   border-color: var(--correct-color);
   background-color: rgba(40, 167, 69, 0.2);
+  border-width: 3px;
   cursor: not-allowed;
 }
 
@@ -801,6 +805,22 @@ small {
   right: 5px;
   background: var(--correct-color);
   color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.wrong-indicator {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: var(--wrong-color);
+  color: var(--title-color);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -830,25 +850,25 @@ small {
     width: 98%;
     padding: 1rem;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 8px;
   }
-  
+
   .civ-image {
     width: 48px;
     height: 48px;
   }
-  
+
   .civ-name {
     font-size: 0.7rem;
   }
-  
+
   .civ-grid-container {
     max-height: 400px;
   }
-  
+
   .correct-indicator {
     width: 16px;
     height: 16px;
@@ -861,11 +881,11 @@ small {
     width: 98%;
     max-height: 600px;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
   }
-  
+
   .civ-image {
     width: 56px;
     height: 56px;
@@ -877,7 +897,7 @@ small {
     width: 95%;
     max-height: 600px;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
@@ -888,7 +908,7 @@ small {
     width: 90%;
     max-height: 600px;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   }
@@ -899,7 +919,7 @@ small {
     width: 85%;
     max-height: 600px;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
@@ -911,12 +931,12 @@ small {
     max-width: 1400px;
     max-height: 600px;
   }
-  
+
   .civ-grid {
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 8px;
   }
-  
+
   .civ-image {
     width: 72px;
     height: 72px;
@@ -989,4 +1009,12 @@ small {
 
 .heart-icon {
   font-size: 1.2em;
+}
+
+.civ-button.discarded {
+  border-color: var(--title-color);
+  background: var(--secondary-color);
+  opacity: 0.7;
+  filter: grayscale(100%);
+  border: 1px solid #666;
 }
